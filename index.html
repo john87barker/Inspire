@@ -12,23 +12,31 @@
     <title>Inspire</title>
 </head>
 
-<body>
+<body id="bg">
+
     <header>
-        <nav class="navbar navbar-dark navbar-expand bg-dark text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">Inspire</span>
+        <nav class="navbar navbar-dark navbar-expand text-dark d-flex justify-content-end bg-info">
+            
+                <span class="ml-2">Weather Info</span>
             </a>
         </nav>
     </header>
     <main class="container">
-        <div id="app"></div>
+       
+
+
     </main>
-    <footer class="bg-dark text-light">
+    <footer class=" text-light text-dark bg-primary">
+        <div class="text-left">
+           <p> <small>Image Info</small></p>
+        </div>
         <div class="text-center">
-            <p><small>Made with love by Codeworks</small></p>
+            <p><small>Quote Stuff</small></p>
         </div>
     </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="app/main.js" type="module"></script>
 </body>

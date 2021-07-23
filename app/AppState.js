@@ -1,10 +1,11 @@
 // import Value from "./Models/Value.js"
+import Background from "./Models/Background.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  // /** @type {Value[]} */
-  // values = []
+ 
+  Background = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {

@@ -1,14 +1,17 @@
 export default class Background {
-    constructor(data) {
-        this.title = data.title
+    constructor({id, author, url, imgUrl}) {
+        this.id = id
+        this.author = author
+        this.url = url
+        this.imgUrl = imgUrl
     }
 
     get Template() {
 
         return /*html*/`
-        <div class="card p-2 value">
-            ${this.title}
-        </div>
+        <span class="text-dark">
+           <img class="vh-100 vw-100 " src="${this.imgUrl}" alt="${this.url}"> 
+        </span>
         `
     }
 }
