@@ -1,4 +1,4 @@
-export default class Value {
+export default class Background {
     constructor(data) {
         this.title = data.title
     }
