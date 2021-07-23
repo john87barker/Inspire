@@ -7,7 +7,7 @@ class BackgroundsService{
   
   async getBG() {
     const res = await sandbox.get('images')
-    console.log(res.data)
+    // console.log(res.data)
     ProxyState.Background = new Background(res.data)
 }
 

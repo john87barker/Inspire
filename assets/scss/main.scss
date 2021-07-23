@@ -7,13 +7,13 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  max-height: 90vh;
+  max-width: 100vh;
   background-color: $body-bg;
+
+  background-size: cover;
 }
 
 main {
   flex-grow: 1;
 }
-
-
-

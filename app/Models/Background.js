@@ -9,9 +9,7 @@ export default class Background {
     get Template() {
 
         return /*html*/`
-        <span class="text-dark">
-           <img class="vh-100 vw-100 " src="${this.imgUrl}" alt="${this.url}"> 
-        </span>
+       
         `
     }
 }
