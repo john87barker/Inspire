@@ -1,13 +1,15 @@
 export default class Temp{
-   constructor(data) {
-        this.title = data.title
+    constructor({main, name }) {
+        this.main = main.temp
+        this.name = name
     }
 
     get Template() {
 
         return /*html*/`
-        <div class="card p-2 value">
-            ${this.title}
+        <div class="">
+           <p> ${this.main} </p>
+           <p> ${this.name} </p>
         </div>
         `
     }
