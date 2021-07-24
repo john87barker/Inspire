@@ -9,7 +9,7 @@ export default class Background {
     get Template() {
 
         return /*html*/`
-       
+        <h5>Photographer: <b>${this.author}</b></h5>
         `
     }
 }

@@ -4,7 +4,7 @@ import { backgroundsService } from "../Services/BackgroundsService.js"
 function _draw() {
   
   document.body.style.backgroundImage = `url('${ProxyState.Background.imgUrl}')`
- 
+ document.getElementById('bg').innerHTML = ProxyState.Background.Template
 }
 
 

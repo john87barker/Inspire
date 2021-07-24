@@ -1,14 +1,16 @@
 export default class Quote{
-   constructor(data) {
-        this.title = data.title
+    constructor({content, author}) {
+        this.content = content
+        this.author = author
     }
 
     get Template() {
 
         return /*html*/`
-        <div class="card p-2 value">
-            ${this.title}
-        </div>
+        
+           <h4> ${this.content}</h4>
+           <h5> ${this.author}</h5>
+        
         `
     }
 }

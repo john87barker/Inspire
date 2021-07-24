@@ -5,15 +5,15 @@
 @import "./loaders.scss";
 
 body {
-  display: flex;
+  display: block;
   flex-direction: column;
-  max-height: 90vh;
+  max-height: 80vh;
   max-width: 90vw;
   background-color: $body-bg;
   background-size: cover;
 }
 
 main {
-  flex-grow: 2;
+  flex-grow: 1;
   min-height: 90vh;
 }

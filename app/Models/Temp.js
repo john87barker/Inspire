@@ -1,15 +1,15 @@
 export default class Temp{
     constructor({main, name }) {
-        this.main = main.temp
+        this.temp = main.temp
         this.name = name
     }
 
     get Template() {
 
         return /*html*/`
-        <div class="">
-           <p> ${this.main} </p>
-           <p> ${this.name} </p>
+        <div class="text-right">
+           <h3> ${this.temp} °K</h3>
+           <h4><b> ${this.name}  </b</h4>
         </div>
         `
     }
