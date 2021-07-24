@@ -17,3 +17,19 @@ main {
   flex-grow: 1;
   min-height: 90vh;
 }
+
+.text {
+  text-shadow: black 5px;
+}
+
+.quote {
+  &:hover {
+    .author {
+      opacity: 1;
+    }
+  }
+  .author {
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+}
