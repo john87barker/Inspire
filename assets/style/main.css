@@ -10711,4 +10711,10 @@ main {
   transition: all 0.3s linear;
 }
 
+.todo {
+  background-color: grey;
+  height: 10em;
+  width: 2em;
+}
+
 /*# sourceMappingURL=main.css.map */
