@@ -34,19 +34,31 @@ class ToDosService{
 
   
 
-   toggle(id) {
-    let found = ProxyState.todos.find(task => task.id == id)
-
-    found.checked = !found.checked
-
-    ProxyState.todos = ProxyState.todos
-
-    console.log(found)
+  async toggle(id) {
+      try {
+        let found = ProxyState.todos.find(t => t.id == id)
+        found.completed = !found.completed
+        console.log('toggle', found)
+        const res = await sandbox.put('johnbarker/todos/' + id, found)
+        console.log(res.data)
+        ProxyState.todos = ProxyState.todos
+      } catch (error) {
+        console.error(error)
+      }
+       
+     
   }
 
-
+// TODO
   async removeTask(id) {
-    const res = await sandbox.delete(ProxyState.todos.id)
+    try {
+      console.log(id, 'in the service')
+      const res = await sandbox.delete('johnbarker/todos/' + id)
+      ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
+      
+    } catch (error) {
+      console.error(error)
+    }
   }
 }
 

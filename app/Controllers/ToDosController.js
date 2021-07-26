@@ -6,8 +6,8 @@ function _drawAll() {
   const todo = ProxyState.todos
   let template = ''
   todo.forEach(t => template += `
-            <ul class="col-12">
-                <input type="checkbox" name="complete" value="" onclick="app.toDosController.toggle('${t.id}')" ${t.checked? 'checked' : '' }>${t.description}
+            <ul class="col-12 text-left">
+                <input type="checkbox" name="complete" value="checkedValue" onclick="app.todosController.toggle('${t.id}')" ${t.completed ? 'checked' : '' }>${t.description} <button type="button" class="btn btn-warning btn-sm" onclick="app.todosController.removeTask('${t.id}')">x</button>
             </ul>` )
   // NOTE this just gets it to read undefined...If I take the template off it shows all of them as [object Object]
   document.getElementById('todo').innerHTML = template
@@ -51,8 +51,6 @@ export default class ToDosController{
     // form.reset()
   }
 
-
-
   async getTask() {
   try {
     await todosService.getTask()
@@ -69,5 +67,18 @@ export default class ToDosController{
     }
   }
 
+  async removeTask(id) {
+    try {
+    console.log(id, 'in controller')
+    await todosService.removeTask(id)
+  } catch (error) {
+    console.error(error)
+  }
+  }
   
+  async toggle(id) {
+    todosService.toggle(id)
+    
+  }
+
 }
