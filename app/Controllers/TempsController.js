@@ -19,8 +19,8 @@ export default class TempsController{
     }
   }
 
-  toCelsius() {
-    tempsService.toCelsius()
+  toggleTemp() {
+    tempsService.toggleTemp()
   }
 
    }

@@ -10,15 +10,29 @@ class TempsService{
     console.log(res.data)
     ProxyState.Temp = new Temp(res.data)
   }
-//  NOTE doesn't work in context yet.
-  toCelsius() {
-    
-    let c = `(${ProxyState.Temp.temp}-273.15)`
+  toggleTemp() {
+    let c = ProxyState.Temp.celsius
+    let f = ProxyState.Temp.farenheit
 
-    ProxyState.Temp = c
-    
+    // c = (c == )
+
+    // if (c) {
+    //   document.getElementById('farenheit').innerText = ProxyState.Temp.farenheit
+    //   document.getElementById('celsius').innerText = ''
+    // }
+    // if (f) {
+    //   document.getElementById('celsius').innerText = ProxyState.Temp.farenheit
+    //   document.getElementById('farenheit').innerText = ''
+    // }
+// NOTE totally stole this to try it cause I'm getting tired but it doesn't keep my button on it with the template I also stole...
+    var x = document.getElementById(`temp`);
+  if (x.innerHTML === `${ProxyState.Temp.farenheit}`) {
+    x.innerHTML =`${ProxyState.Temp.celsius}`;
+  } else {
+    x.innerHTML = `${ProxyState.Temp.farenheit}`;
   }
 
+  }
 }
 
 export const tempsService = new TempsService();

@@ -43,10 +43,11 @@ export default class ToDosController{
       }
       await todosService.createTask(rawTask)
       
-      // form.reset() maybe not right line
     } catch (error) {
       console.error(error)
     }
+    // maybe not right line
+    // form.reset()
   }
 
 

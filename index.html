@@ -17,30 +17,36 @@
      
     <header>
         <nav class="navbar navbar-dark navbar-expand text-secondary d-flex justify-content-end ">
-            
+                <!-- <span class="ml-2" id="celsius"></span>
+                <span class="ml-2" id="farenheit"></span> -->
                 <span class="ml-2" id="temp"></span>
             </a>
         </nav>
     </header>
     <main>
         <div class="row">
-            <div class="col">Empty</div>
+            <div class="col"></div>
         </div>
         <div class="row">
             <h1 class="col text-secondary text-center" id="clock">Clock</h1>
+            
         </div>
 
 
         <!-- NOTE  to do list-->
         <div class="row">
-            <div class="col-md-3 card todo">
+            <div class="col-md-3 card">
                 <div class="row">
-                    <h4 class="col-12">Things to do...</h4>
-                        <span id="todo"></span>
-                    <form onsubmit="app.todosController.createTask(event)">
-                        <input type="text" class="form-control d-flex align-items-end" name="description" id="description" placeholder="add task" required minlength="3" maxlength="50" />
-                        <button type="submit" class="btn btn-info p-0" onsubmit="app.todosController.createTask(event)">Add to list</button>
-                    </form>
+                    <div class="col-12 p-1">
+                        <h4 >Things to do...</h4>
+                    </div>
+                    <div class="col-12 p-5" id="todo"></div>
+                    <div>    
+                        <form onsubmit="app.todosController.createTask(event)">
+                            <input type="text" class="form-control d-flex align-items-end col-12 p-1 mb-3 " name="description" id="description" placeholder="add task" required minlength="3" maxlength="50" />
+                            <button type="submit" class="btn btn-info p-0" onsubmit="app.todosController.createTask(event)">Add to list</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>       

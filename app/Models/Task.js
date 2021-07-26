@@ -11,7 +11,7 @@ export default class Task{
 
         return /*html*/`
             <span class="col-12">
-                <input type="checkbox" name="complete" value="" ('${this.id}')" ${this.checked}>${this.description}
+                <input type="checkbox" name="complete" value="" ('${this.id}')" ${this.checked ? 'checked' : '' }>${this.description}
             </span>
             `
         // ? 'checked' : '' 

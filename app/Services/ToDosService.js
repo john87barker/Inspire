@@ -9,6 +9,7 @@ class ToDosService{
     console.log(res.data)
 // console.log(res.data.description)
     ProxyState.ToDos = [...ProxyState.ToDos, new Task(res.data)]
+    
   }
 
   async getTask() {
