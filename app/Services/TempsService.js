@@ -10,12 +10,14 @@ class TempsService{
     console.log(res.data)
     ProxyState.Temp = new Temp(res.data)
   }
-
-  // changeTemp() {
-  //   const f =Math.floor(`(${ProxyState.Temp.temp}-273.15) * 1.8 + 32`)
-  //   let c = `${ProxyState.Temp.temp}-273.15`
+//  NOTE doesn't work in context yet.
+  toCelsius() {
     
-  // }
+    let c = `(${ProxyState.Temp.temp}-273.15)`
+
+    ProxyState.Temp = c
+    
+  }
 
 }
 
