@@ -8,7 +8,7 @@ export default class Temp{
     get Template() {
 
         return /*html*/`
-        <div class="text-right">
+        <div class="text-right  text-bg">
             <h3> ${this.farenheit}°F</h3>
             <h5> ${this.celsius}°C</h5>
             <h4><b> ${this.name}  </b</h4>

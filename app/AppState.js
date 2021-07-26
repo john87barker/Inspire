@@ -1,13 +1,13 @@
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
-import Task from "./Models/Task.js"
+import ToDo from "./Models/ToDo.js"
 
 class AppState extends EventEmitter {
   Quote = null
   Temp = null
   Background = null
   Clock = null
-  ToDos = null
+  todos = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {

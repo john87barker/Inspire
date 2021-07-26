@@ -1,6 +1,6 @@
 import { generateId } from "../Utils/GenerateId.js"
 
-export default class Task{
+export default class ToDo{
     constructor({description, completed, id = generateId}) {
         this.checked = completed
         this.description = description
