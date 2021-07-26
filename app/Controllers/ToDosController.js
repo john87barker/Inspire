@@ -3,14 +3,15 @@ import { ProxyState } from "../AppState.js";
 import { todosService } from "../Services/ToDosService.js"
 
 function _drawAll() {
-  // const todo = ProxyState.ToDos
+  const todo = ProxyState.todos
   let template = ''
-  // todo.forEach(t => template += `
-  //           <span class="col-12">
-  //               <input type="checkbox" name="complete" value="" onclick="app.toDosController.toggle('${this.id}')" ${this.checked? 'checked' : '' }>${this.description}
-  //           </span>` )
-  // NOTE this just gets it to read undefined...
-  document.getElementById('todo').innerHTML = ProxyState.todos.Template
+  todo.forEach(t => template += `
+            <ul class="col-12">
+                <input type="checkbox" name="complete" value="" onclick="app.toDosController.toggle('${t.id}')" ${t.checked? 'checked' : '' }>${t.description}
+            </ul>` )
+  // NOTE this just gets it to read undefined...If I take the template off it shows all of them as [object Object]
+  document.getElementById('todo').innerHTML = template
+    // ProxyState.todos.Template
   
   // NOTE this is getting put to the page but pulling from the model is not working
   // document.getElementById('todo').innerHTML =
@@ -27,6 +28,7 @@ export default class ToDosController{
   constructor() {
     ProxyState.on('todos', _drawAll)
     this.getAllTasks()
+    
   }
   async createTask() {
     try {

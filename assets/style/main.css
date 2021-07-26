@@ -4283,7 +4283,7 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: white;
+  background-color: rgba(173, 172, 172, 0.308);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -10719,6 +10719,11 @@ main {
 
 .text-bg {
   background-color: rgba(194, 190, 190, 0.349);
+}
+
+.side-bar-scroll {
+  max-height: 20vh;
+  overflow-y: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

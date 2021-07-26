@@ -43,3 +43,8 @@ main {
 .text-bg {
   background-color: rgba(194, 190, 190, 0.349);
 }
+
+.side-bar-scroll {
+  max-height: 20vh;
+  overflow-y: auto;
+}
