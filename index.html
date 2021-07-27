@@ -7,19 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="assets/style/style.css">
     <title>Inspire</title>
 </head>
 <!-- TODO fix the vh so it looks better -->
+
 <body class="container-fluid">
-     
+
     <header>
         <nav class="navbar navbar-dark navbar-expand text-dark d-flex justify-content-end ">
-                <!-- <span class="ml-2" id="celsius"></span>
+            <!-- <span class="ml-2" id="celsius"></span>
                 <span class="ml-2" id="farenheit"></span> -->
-                <span class="ml-2" id="temp"></span>
+            <span class="ml-2" id="temp"></span>
             </a>
         </nav>
     </header>
@@ -29,7 +32,7 @@
         </div>
         <div class="row">
             <h1 class="col-3 offset-4 text-dark text-center text-bg" id="clock">Clock</h1>
-            
+
         </div>
 
 
@@ -38,34 +41,36 @@
             <div class="col-md-3 card m-2 ">
                 <div class="row ml-2 mb-1">
                     <div class="col-12 p-1">
-                        <h4 >Things to do...</h4>
+                        <h4>Things to do...</h4>
                     </div>
-                    <div class="col-12 p-5 side-bar-scroll  " id="todo"></div>
-                    <div>    
+                    <div class="col-12 p-2 side-bar-scroll  " id="todo"></div>
+                    <div>
                         <form onsubmit="app.todosController.createTask(event)">
-                            <input type="text" class="form-control  col-12 p-1 mb-3 " name="description" id="description" placeholder="add task" required minlength="3" maxlength="50" />
-                            <button type="submit" class="btn btn-info p-0" onsubmit="app.todosController.createTask(event)">Add to list</button>
+                            <input type="text" class="form-control  col-12 p-1 mt-1 mb-3 " name="description"
+                                id="description" placeholder="add task" required minlength="3" maxlength="50" />
+                            <button type="submit" class="btn btn-info p-0"
+                                onsubmit="app.todosController.createTask(event)">Add to list</button>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>       
+        </div>
 
 
 
     </main>
     <footer class="row d-flex justify-content-between fixed-bottom text-secondary p-0 text-dark">
-            <div class="col-md-3 text-left align-baseline text-bg" id="bg" >
-                <!-- Photorapher Template -->
-            </div>
-            <div class="col-md-9 text-right pr-5 text-bg" id="quote">
-                <!-- Quote Template -->
-            </div>
+        <div class="col-md-3 text-left align-baseline text-bg" id="bg">
+            <!-- Photorapher Template -->
+        </div>
+        <div class="col-md-9 text-right pr-5 text-bg" id="quote">
+            <!-- Quote Template -->
+        </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
-    integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="app/main.js" type="module"></script>
 </body>
 

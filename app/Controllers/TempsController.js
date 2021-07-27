@@ -4,8 +4,8 @@ import { ProxyState } from "../AppState.js"
 function _draw() {
   document.getElementById('temp').innerHTML = ProxyState.Temp.Template
 }
- 
-export default class TempsController{
+
+export default class TempsController {
   constructor() {
     ProxyState.on('Temp', _draw)
     this.getTemp()
@@ -19,8 +19,8 @@ export default class TempsController{
     }
   }
 
-  toggleTemp() {
-    tempsService.toggleTemp()
-  }
+  // toggleTemp() {
+  //   tempsService.toggleTemp()
+  // }
 
-   }
+}
